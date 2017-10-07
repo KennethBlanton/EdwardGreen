@@ -10,7 +10,11 @@ var moving = false;
 var delta = 0;
 var up = false;
 var down = false;
-document.addEventListener(mousewheelevt, (e) => {
+function addScrollJack() {
+	document.addEventListener(mousewheelevt, control);
+}
+addScrollJack();
+function control(e) {
 	e.stopPropagation();
 	e.preventDefault();
 	// console.log(e);
@@ -33,18 +37,26 @@ document.addEventListener(mousewheelevt, (e) => {
 
 	}
 	if(delta>3) {
-		$('.move').addClass('active');
+		document.removeEventListener(mousewheelevt, control);
+		$('.dot>.move').addClass('active');
 		document.body.scrollLeft = 500;
 		setTimeout(function(){moving=false}, 500);
+		$('.dot').addClass('active');
+		$('.dot2').addClass('new');
 		delta = 0;
+		setTimeout(addScrollJack,800);
 	}else if(delta <-3) {
-		$('.move').removeClass('active');
+		document.removeEventListener(mousewheelevt, control);
+		$('.dot>.move').removeClass('active');
 		document.body.scrollLeft = 0;
-		setTimeout(function(){moving=false}, 500);
+		setTimeout(addScrollJack,800);
 		delta = 0;
+		$('.dot').removeClass('active');
+		$('.dot2').removeClass('new');
 	}
 
-});
+}
+
 $(window).on('scroll', function () {
    console.log('hiasd')
 });

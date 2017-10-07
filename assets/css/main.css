@@ -5,31 +5,68 @@ html, body {
 body {
   margin: 0;
   background: red;
-  width: 100vw;
-  height: 100vh;
   overflow: hidden; }
 
 .background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0; }
-  .background h1 {
+  width: 100vw;
+  height: 100vh; }
+  .background .dot {
     position: absolute;
-    left: 50%;
+    left: -2vw;
     top: 50%;
-    transform: translate(-50%, -50%); }
-  .background .move {
-    width: 0px;
-    height: 5px;
-    background: black;
+    transition: 1.5s all;
+    transition-delay: .2s; }
+    .background .dot.active {
+      left: -60vw; }
+    .background .dot .move {
+      width: 0vw;
+      height: 5px;
+      background: black;
+      position: absolute;
+      left: 51.8vw;
+      transform: translate(0, -50%);
+      top: 50%;
+      transition: .8s all; }
+    .background .dot .move.active {
+      width: 48vw; }
+    .background .dot .circle {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: 50%;
+      left: 50vw;
+      transform: translate(-50%, -50%);
+      border: 1px solid black;
+      border-radius: 100%; }
+  .background .dot2 {
     position: absolute;
-    left: 50%;
+    left: 50vw;
+    opacity: 0;
     top: 50%;
-    transform: translate(3%, 330%);
-    transition: .5s all; }
-  .background .move.active {
-    width: 1000px; }
+    transition: 2s all;
+    transition-delay: .8s; }
+    .background .dot2.new {
+      left: 0%;
+      opacity: 1; }
+    .background .dot2 .move {
+      width: 0vw;
+      height: 5px;
+      background: black;
+      position: absolute;
+      left: 43.4vw;
+      transform: translate(0, -50%);
+      top: 50%;
+      transition: .5s all; }
+    .background .dot2 .move.active {
+      width: 48vw; }
+    .background .dot2 .circle {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: 50%;
+      left: 41.6vw;
+      transform: translate(-50%, -50%);
+      border: 1px solid black;
+      border-radius: 100%; }
 
 /*# sourceMappingURL=main.css.map */
