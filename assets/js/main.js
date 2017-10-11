@@ -38,20 +38,20 @@ function control(e) {
 	}
 	if(delta>3) {
 		document.removeEventListener(mousewheelevt, control);
-		$('.dot>.move').addClass('active');
+		$('.dot1>.move').addClass('active');
 		document.body.scrollLeft = 500;
 		setTimeout(function(){moving=false}, 500);
-		$('.dot').addClass('active');
+		$('.dot1').addClass('active');
 		$('.dot2').addClass('new');
 		delta = 0;
 		setTimeout(addScrollJack,800);
 	}else if(delta <-3) {
 		document.removeEventListener(mousewheelevt, control);
-		$('.dot>.move').removeClass('active');
+		$('.dot1>.move').removeClass('active');
 		document.body.scrollLeft = 0;
 		setTimeout(addScrollJack,800);
 		delta = 0;
-		$('.dot').removeClass('active');
+		$('.dot1').removeClass('active');
 		$('.dot2').removeClass('new');
 	}
 
