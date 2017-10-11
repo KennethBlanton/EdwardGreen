@@ -1,0 +1,80 @@
+.background {
+	width:100vw;
+	height:100vh;
+	.dot{
+		position:absolute;
+		left: -2vw;
+    	top: 50%;
+		transition:1.5s all;
+		transition-delay: .2s;
+		&.active {
+			left:-60vw;
+		}
+		.move {
+			width: 0vw;
+		    height: 5px;
+		    background: black;
+		    position: absolute;
+		    left: 51.8vw;
+		    transform: translate(0,-50%);
+		    top: 50%;
+		    transition: .8s all; 
+		}
+
+		.move.active {
+		  width: 48vw; 
+		}
+		.circle {
+			width:50px;
+			height:50px;
+			position:absolute;
+			top: 50%;
+			left: 50vw;
+			transform:translate(-50%,-50%);
+			border: 1px solid black;
+			border-radius:100%;
+		}
+	}
+	.dot2 {
+		// width: 100vw;
+  //   	height: 100vh;
+    	position:absolute;
+		left: 50vw;
+		opacity:0;
+    	top: 50%;
+    	transition:2s all;
+    	transition-delay:.8s;
+		&.old {
+			
+		}
+		&.new {
+			left:0%;
+			opacity:1;
+		}
+		.move {
+			width: 0vw;
+		    height: 5px;
+		    background: black;
+		    position: absolute;
+		    left: 43.4vw;
+		    transform: translate(0,-50%);
+		    top: 50%;
+		    transition: .5s all; 
+		}
+
+		.move.active {
+		  width: 48vw; 
+		}
+		.circle {
+			width:50px;
+			height:50px;
+			position:absolute;
+			top: 50%;
+			left: 41.6vw;
+			transform:translate(-50%,-50%);
+			border: 1px solid black;
+			border-radius:100%;
+		}
+	}
+}
+

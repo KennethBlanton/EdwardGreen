@@ -1,0 +1,30 @@
+.nav {
+	position: fixed;
+	display: flex;
+	width: 96%;
+	height: 50px;
+	top: 0;
+	justify-content: space-between;
+	padding: 15px 25px;
+
+	.logo {
+		background-image: url(../img/home/logo.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		width: 60px;
+		height: 50px;
+	}
+
+	.nav-items {
+		width: 50%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		color: white;
+		font-family: "bryantpro-regular";
+
+		.fa {
+			font-size: 1.7rem;
+		}
+	}
+}

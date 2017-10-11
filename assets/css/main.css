@@ -1,11 +1,207 @@
 html, body {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  box-sizing: border-box; }
 
 body {
   margin: 0;
-  background: red;
-  overflow: hidden; }
+  background: #FFF8F2; }
+
+@font-face {
+  font-family: "bryantpro-light";
+  src: url(../fonts/bryantpro-light-webfont.ttf); }
+
+@font-face {
+  font-family: "bryantpro-regular";
+  src: url(../fonts/bryantpro-regular-webfont.ttf); }
+
+@font-face {
+  font-family: "code-bold";
+  src: url(../fonts/CODE-Bold.otf); }
+
+@font-face {
+  font-family: "code-light";
+  src: url(../fonts/CODE-Light.otf); }
+
+.nav {
+  position: fixed;
+  display: flex;
+  width: 96%;
+  height: 50px;
+  top: 0;
+  justify-content: space-between;
+  padding: 15px 25px; }
+  .nav .logo {
+    background-image: url(../img/home/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 50px; }
+  .nav .nav-items {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-family: "bryantpro-regular"; }
+    .nav .nav-items .fa {
+      font-size: 1.7rem; }
+
+.hero {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/home/home-hero.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat; }
+  .hero .hero-text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; }
+    .hero .hero-text h1 {
+      font-size: 10rem;
+      font-family: "code-light";
+      letter-spacing: 25px;
+      margin: 0; }
+      .hero .hero-text h1:nth-child(2)::before {
+        position: absolute;
+        display: block;
+        margin-left: -12px;
+        content: "";
+        width: 80%;
+        height: 2px;
+        background-color: #FCB543; }
+    .hero .hero-text p {
+      font-size: 1.2rem;
+      font-family: "bryantpro-light";
+      text-align: center;
+      line-height: 25px; }
+
+.details {
+  width: 100%;
+  height: 100%;
+  display: flex; }
+  .details .details-text {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .details .details-text h2 {
+      font-family: "code-light";
+      font-size: 1.5rem;
+      text-align: center; }
+      .details .details-text h2 span {
+        font-size: 4rem;
+        font-family: "code-bold"; }
+      .details .details-text h2::after {
+        content: "";
+        width: 25%;
+        height: 3px;
+        background-color: black;
+        position: absolute;
+        display: block; }
+    .details .details-text p {
+      font-family: "bryantpro-light";
+      width: 35%;
+      text-align: center; }
+  .details .details-image {
+    width: 50%;
+    height: 100%; }
+    .details .details-image img {
+      width: 100%;
+      height: 100%; }
+
+.history {
+  width: 100%;
+  height: 100%;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column; }
+  .history h2 {
+    width: 50%;
+    margin-left: 25px;
+    margin-bottom: 100px;
+    font-family: "bryantpro-light"; }
+    .history h2 span {
+      font-family: "bryantpro-regular"; }
+    .history h2::after {
+      position: absolute;
+      text-align: center;
+      right: 0;
+      content: "";
+      width: 50%;
+      height: 2px;
+      background-color: black; }
+  .history .images {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: space-around; }
+    .history .images .image {
+      width: 30%; }
+      .history .images .image img {
+        width: 100%;
+        height: 100%; }
+
+.steps {
+  width: 100%;
+  height: 100%; }
+  .steps img {
+    width: 100%;
+    height: 100%; }
+
+.style {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around; }
+  .style .text {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .style .text h2 {
+      font-family: "code-light";
+      text-align: center; }
+      .style .text h2 span {
+        font-family: "code-light";
+        font-size: 4em; }
+      .style .text h2::after {
+        content: "";
+        width: 18%;
+        height: 3px;
+        background-color: black;
+        position: absolute;
+        left: 8%;
+        display: block; }
+    .style .text p {
+      font-family: "bryantpro-light";
+      width: 50%;
+      text-align: center; }
+  .style .image {
+    width: 30%;
+    height: 100%; }
+  .style :nth-child(2) {
+    display: flex;
+    align-items: center; }
+    .style :nth-child(2) img {
+      width: 100%;
+      height: 70%; }
+  .style :nth-child(3) {
+    display: flex;
+    align-items: center; }
+    .style :nth-child(3) img {
+      width: 100%;
+      height: 90%; }
 
 .background {
   width: 100vw;
@@ -68,5 +264,21 @@ body {
       transform: translate(-50%, -50%);
       border: 1px solid black;
       border-radius: 100%; }
+
+footer {
+  width: 98%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 25px;
+  background-color: #FCE9D7; }
+  footer h3 {
+    font-family: "bryantpro-light";
+    font-size: 1rem; }
+  footer span {
+    font-family: "bryantpro-light";
+    font-size: 1rem;
+    margin: 0 10px; }
 
 /*# sourceMappingURL=main.css.map */

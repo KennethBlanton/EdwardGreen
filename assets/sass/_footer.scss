@@ -1,0 +1,21 @@
+footer {
+	width: 98%;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding-left: 25px;
+	background-color: #FCE9D7;
+
+	h3 {
+		font-family: "bryantpro-light";
+		font-size: 1rem;
+		
+	}
+
+	span {
+		font-family: "bryantpro-light";
+		font-size: 1rem;
+		margin: 0 10px;
+	}
+}
