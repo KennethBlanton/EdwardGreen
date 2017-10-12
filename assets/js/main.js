@@ -38,13 +38,16 @@ function control(e) {
 	}
 	if(delta>3) {
 		document.removeEventListener(mousewheelevt, control);
-		$('.dot1>.move').addClass('active');
+		// $('.dot1>.move').addClass('active');
 		document.body.scrollLeft = 500;
 		setTimeout(function(){moving=false}, 500);
 		$('.dot1').addClass('active');
 		$('.dot2').addClass('new');
+		setTimeout(function(){$('.dot2>.move').addClass('active')},1000);
 		delta = 0;
+
 		setTimeout(addScrollJack,800);
+
 	}else if(delta <-3) {
 		document.removeEventListener(mousewheelevt, control);
 		$('.dot1>.move').removeClass('active');
@@ -53,6 +56,8 @@ function control(e) {
 		delta = 0;
 		$('.dot1').removeClass('active');
 		$('.dot2').removeClass('new');
+		setTimeout(function(){$('.dot2>.move').addClass('active')},1000);
+
 	}
 
 }
