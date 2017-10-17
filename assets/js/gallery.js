@@ -2,10 +2,11 @@
 function template(shoe) {
 	return (
 		`<div class="gallery-item">
-			<div><img src="${shoe.link}"></div>
+			<div class="item-image"><img src="${shoe.link}"></div>
 			<h1>${shoe.name}</h1>
 			<p>${shoe.description}</p>
 			<p>${shoe.price}</p>
+			<button type="button">SELECT</button>
 		</div>`
 	)
 }
