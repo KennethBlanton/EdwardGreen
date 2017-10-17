@@ -31,6 +31,9 @@ body {
   top: 0;
   justify-content: space-between;
   padding: 15px 25px; }
+  .nav a {
+    text-decoration: none;
+    color: white; }
   .nav .logo {
     background-image: url(../img/home/logo.png);
     background-size: contain;
@@ -203,11 +206,164 @@ body {
       width: 100%;
       height: 90%; }
 
+.gallery {
+  margin-top: 80px; }
+
+.bespoke-hero {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/bespoke/bespoke-hero.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat; }
+  .bespoke-hero .hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; }
+    .bespoke-hero .hero-text h1 {
+      font-family: "code-light";
+      font-size: 5rem;
+      letter-spacing: 10px;
+      margin-bottom: 0; }
+      .bespoke-hero .hero-text h1::after {
+        position: absolute;
+        display: block;
+        margin-left: -12px;
+        margin-top: 15px;
+        content: "";
+        width: 80%;
+        height: 2px;
+        background-color: #FCB543; }
+    .bespoke-hero .hero-text h4 {
+      font-family: "code-bold";
+      font-size: 2rem;
+      margin-bottom: 0; }
+    .bespoke-hero .hero-text p {
+      font-family: "bryantpro-light";
+      font-size: 1.2rem;
+      width: 43%;
+      text-align: center;
+      line-height: 25px; }
+    .bespoke-hero .hero-text .fa {
+      font-size: 5rem;
+      color: white;
+      position: absolute;
+      bottom: -200px; }
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; }
+  .gallery .gallery-item {
+    border: 3px solid black;
+    width: 20%;
+    padding: 10px;
+    margin: 10px;
+    text-align: center; }
+    .gallery .gallery-item .item-image {
+      width: 100%; }
+      .gallery .gallery-item .item-image img {
+        height: 100%;
+        width: 100%; }
+    .gallery .gallery-item h1 {
+      font-family: "code-bold"; }
+    .gallery .gallery-item p {
+      font-family: "bryantpro-regular"; }
+
+.size {
+  width: 100%;
+  height: 100%; }
+  .size .size-image {
+    background-image: url(../img/bespoke/fit.png);
+    background-size: 100% 100%;
+    background-position-y: -110px;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    color: white; }
+    .size .size-image .size-text {
+      padding: 120px 110px;
+      width: 24%; }
+      .size .size-image .size-text h1 {
+        display: flex;
+        flex-direction: column;
+        font-family: 'code-light';
+        font-size: 4rem; }
+        .size .size-image .size-text h1 span {
+          font-size: 2.5rem; }
+        .size .size-image .size-text h1::after {
+          content: '';
+          background-color: white;
+          width: 100%;
+          height: 2px;
+          position: relative;
+          left: 0; }
+      .size .size-image .size-text p {
+        font-family: 'bryantpro-light';
+        text-align: center; }
+      .size .size-image .size-text h3 {
+        text-align: center;
+        font-family: "bryantpro-regular"; }
+      .size .size-image .size-text .icons {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center; }
+        .size .size-image .size-text .icons .fa {
+          font-size: 2rem; }
+        .size .size-image .size-text .icons p {
+          font-family: "bryantpro-light"; }
+  .size .sizes {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+    .size .sizes h4 {
+      font-family: "code-bold";
+      color: darkgray;
+      margin-bottom: 0; }
+    .size .sizes h5 {
+      font-family: "bryantpro-light";
+      color: lightgray;
+      margin-top: 0; }
+    .size .sizes .length, .size .sizes .width, .size .sizes .arch {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .size .sizes .length input, .size .sizes .width input, .size .sizes .arch input {
+        width: 20%;
+        height: 20px;
+        border: 1px solid darkgray;
+        text-align: center; }
+  .size a {
+    position: relative;
+    top: -270px;
+    right: -80%;
+    padding: 5px 10px;
+    border: 2px solid black;
+    text-decoration: none;
+    color: black; }
+
 .background {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  background-image: url(../img/home/history-old.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0; }
   .background .dot1 {
     position: absolute;
     right: 30%;
@@ -289,6 +445,9 @@ footer {
   justify-content: flex-start;
   padding-left: 25px;
   background-color: #FCE9D7; }
+  footer a {
+    text-decoration: none;
+    color: black; }
   footer h3 {
     font-family: "bryantpro-light";
     font-size: 1rem; }

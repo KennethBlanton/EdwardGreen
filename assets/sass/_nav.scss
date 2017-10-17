@@ -7,6 +7,11 @@
 	justify-content: space-between;
 	padding: 15px 25px;
 
+	a{
+		text-decoration: none;
+		color: white;
+	}
+
 	.logo {
 		background-image: url(../img/home/logo.png);
 		background-size: contain;
