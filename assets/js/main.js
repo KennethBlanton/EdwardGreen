@@ -141,7 +141,7 @@ function moveDotsDown(moving) {
 		if(pos === 2 ) {
 			// console.log(pos)
 				document.querySelector('.y1890').classList.remove('active');
-				 document.querySelector('.start').classList.add('active');
+				document.querySelector('.start').classList.add('active');
 				console.log('fired');
 				TweenMax.to(".dot2", .3, {right:'30%', opacity:'0', ease:Linear.easeIn}, '.5')
 				TweenMax.to(".dot1>.move", .8, {width:'100vw', ease:Linear.easeIn}, '.5')	
