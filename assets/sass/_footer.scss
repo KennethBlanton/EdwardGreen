@@ -6,7 +6,7 @@ footer {
 	justify-content: flex-start;
 	background-color: #FCE9D7;
 
-	@media screen and (max-width: $phone-bp) {
+	@media screen and (max-width: $tablet-bp) {
 		height: auto;
 		justify-content: center;
 		flex-wrap: wrap;
@@ -23,7 +23,7 @@ footer {
 		font-family: "bryantpro-light";
 		font-size: 1rem;
 
-		@media screen and (max-width: $phone-bp) {
+		@media screen and (max-width: $tablet-bp) {
 			font-size: 1.5rem;
 			margin: 0 0 10px 0;
 		}		
@@ -35,7 +35,7 @@ footer {
 		font-size: 1rem;
 		margin: 0 10px;
 
-		@media screen and (max-width: $phone-bp) {
+		@media screen and (max-width: $tablet-bp) {
 			font-size: 1.5rem;
 			margin-bottom: 10px;
 		}
