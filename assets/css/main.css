@@ -23,15 +23,28 @@ body {
   font-family: "code-light";
   src: url(../fonts/CODE-Light.otf); }
 
+.hamburger {
+  display: flex;
+  padding: 0; }
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  background-color: white; }
+
+button:focus {
+  outline: 0; }
+
 .nav {
   position: fixed;
-  display: flex;
-  width: 96%;
+  display: none;
+  width: 100%;
   height: 50px;
   top: 0;
   justify-content: space-between;
-  padding: 15px 25px;
+  margin: 15px 0;
   z-index: 1000; }
+  @media screen and (min-width: 481px) {
+    .nav {
+      display: flex; } }
   .nav a {
     text-decoration: none;
     color: white; }
@@ -40,16 +53,40 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     width: 60px;
-    height: 50px; }
+    height: 50px;
+    margin-left: 25px; }
   .nav .nav-items {
     width: 50%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: white;
-    font-family: "bryantpro-regular"; }
+    font-family: "bryantpro-regular";
+    margin-right: 25px; }
     .nav .nav-items .fa {
       font-size: 1.7rem; }
+
+.mobile-nav {
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  display: none;
+  top: 0;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 10000;
+  background-color: black;
+  color: white;
+  font-size: 2em; }
+  .mobile-nav .logo {
+    background-image: url(../img/home/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 50px; }
+  @media screen and (max-width: 765px) {
+    .mobile-nav {
+      display: flex; } }
 
 .hero {
   width: 100%;
@@ -57,6 +94,9 @@ body {
   background-image: url(../img/home/home-hero.png);
   background-size: 100% 100%;
   background-repeat: no-repeat; }
+  @media screen and (max-width: 765px) {
+    .hero {
+      background-size: cover; } }
   .hero .hero-text {
     position: absolute;
     display: flex;
@@ -67,11 +107,19 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white; }
+    @media screen and (max-width: 765px) {
+      .hero .hero-text {
+        transform: translate(-50%, -70%); } }
     .hero .hero-text h1 {
       font-size: 10rem;
       font-family: "code-light";
       letter-spacing: 25px;
       margin: 0; }
+      @media screen and (max-width: 765px) {
+        .hero .hero-text h1 {
+          font-size: 4rem;
+          letter-spacing: 20px;
+          margin-left: 25px; } }
       .hero .hero-text h1:nth-child(2)::before {
         position: absolute;
         display: block;
@@ -85,11 +133,21 @@ body {
       font-family: "bryantpro-light";
       text-align: center;
       line-height: 25px; }
+      @media screen and (max-width: 765px) {
+        .hero .hero-text p {
+          font-size: 2.4rem;
+          line-height: normal; } }
 
 .details {
   width: 100%;
   height: 100%;
   display: flex; }
+  @media screen and (max-width: 765px) {
+    .details {
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center; } }
   .details .details-text {
     width: 50%;
     height: 100%;
@@ -97,6 +155,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center; }
+    @media screen and (max-width: 765px) {
+      .details .details-text {
+        height: auto; } }
     .details .details-text h2 {
       font-family: "code-light";
       font-size: 1.5rem;
@@ -104,6 +165,10 @@ body {
       .details .details-text h2 span {
         font-size: 4rem;
         font-family: "code-bold"; }
+        @media screen and (max-width: 765px) {
+          .details .details-text h2 span {
+            font-size: 2rem;
+            font-family: "code-light"; } }
       .details .details-text h2::after {
         content: "";
         width: 25%;
@@ -111,16 +176,30 @@ body {
         background-color: black;
         position: absolute;
         display: block; }
+        @media screen and (max-width: 765px) {
+          .details .details-text h2::after {
+            width: 35%;
+            margin-left: 20px;
+            height: 1px; } }
     .details .details-text p {
       font-family: "bryantpro-light";
       width: 35%;
       text-align: center; }
+      @media screen and (max-width: 765px) {
+        .details .details-text p {
+          display: none; } }
   .details .details-image {
     width: 50%;
     height: 100%; }
+    @media screen and (max-width: 765px) {
+      .details .details-image {
+        height: auto; } }
     .details .details-image img {
       width: 100%;
       height: 100%; }
+      @media screen and (max-width: 765px) {
+        .details .details-image img {
+          height: auto; } }
 
 .history {
   width: 100%;
@@ -128,13 +207,33 @@ body {
   margin-top: 100px;
   display: flex;
   flex-direction: column; }
+  @media screen and (max-width: 765px) {
+    .history {
+      margin-top: 0;
+      height: auto;
+      margin-bottom: 10px; } }
   .history h2 {
     width: 50%;
     margin-left: 25px;
     margin-bottom: 100px;
     font-family: "bryantpro-light"; }
+    @media screen and (max-width: 765px) {
+      .history h2 {
+        width: 100%;
+        text-align: center;
+        font-size: 2rem;
+        margin: 0; } }
     .history h2 span {
       font-family: "bryantpro-regular"; }
+    @media screen and (max-width: 765px) {
+      .history h2::before {
+        position: absolute;
+        text-align: center;
+        right: 0;
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: black; } }
     .history h2::after {
       position: absolute;
       text-align: center;
@@ -143,6 +242,9 @@ body {
       width: 50%;
       height: 2px;
       background-color: black; }
+      @media screen and (max-width: 765px) {
+        .history h2::after {
+          position: relative; } }
   .history .images {
     width: 100%;
     height: 70%;
@@ -150,13 +252,31 @@ body {
     justify-content: space-around; }
     .history .images .image {
       width: 30%; }
+      @media screen and (max-width: 765px) {
+        .history .images .image {
+          width: 100%; } }
       .history .images .image img {
         width: 100%;
         height: 100%; }
+    @media screen and (max-width: 765px) {
+      .history .images .history-old {
+        height: 240px;
+        overflow: hidden; }
+        .history .images .history-old img {
+          height: auto;
+          position: relative;
+          top: -160px; }
+      .history .images .history-second {
+        display: none; }
+      .history .images .history-third {
+        display: none; } }
 
 .steps {
   width: 100%;
   height: 100%; }
+  @media screen and (max-width: 765px) {
+    .steps {
+      height: auto; } }
   .steps img {
     width: 100%;
     height: 100%; }
@@ -166,6 +286,12 @@ body {
   height: 100%;
   display: flex;
   justify-content: space-around; }
+  @media screen and (max-width: 765px) {
+    .style {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: auto; } }
   .style .text {
     width: 30%;
     height: 100%;
@@ -173,9 +299,16 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center; }
+    @media screen and (max-width: 765px) {
+      .style .text {
+        width: auto;
+        height: auto; } }
     .style .text h2 {
       font-family: "code-light";
       text-align: center; }
+      @media screen and (max-width: 765px) {
+        .style .text h2 {
+          font-size: 2rem; } }
       .style .text h2 span {
         font-family: "code-light";
         font-size: 4em; }
@@ -187,25 +320,44 @@ body {
         position: absolute;
         left: 8%;
         display: block; }
+        @media screen and (max-width: 765px) {
+          .style .text h2::after {
+            width: 80%; } }
     .style .text p {
       font-family: "bryantpro-light";
       width: 50%;
       text-align: center; }
-  .style .image {
-    width: 30%;
-    height: 100%; }
+      @media screen and (max-width: 765px) {
+        .style .text p {
+          width: auto;
+          font-size: 1.5rem;
+          padding: 0 25px;
+          margin-top: 0; } }
   .style :nth-child(2) {
     display: flex;
-    align-items: center; }
+    align-items: center;
+    width: 25%; }
     .style :nth-child(2) img {
-      width: 100%;
-      height: 70%; }
+      width: 100%; }
+      @media screen and (max-width: 765px) {
+        .style :nth-child(2) img {
+          position: relative;
+          top: -130px; } }
   .style :nth-child(3) {
     display: flex;
-    align-items: center; }
+    align-items: center;
+    width: 30%; }
     .style :nth-child(3) img {
+      width: 100%; }
+      @media screen and (max-width: 765px) {
+        .style :nth-child(3) img {
+          position: relative;
+          top: 110px; } }
+  @media screen and (max-width: 765px) {
+    .style .image {
+      height: 240px;
       width: 100%;
-      height: 90%; }
+      overflow: hidden; } }
 
 .gallery {
   margin-top: 80px; }
@@ -214,9 +366,13 @@ body {
   display: flex;
   width: 100%;
   height: 100%;
-  background-image: url(../img/bespoke/bespoke-hero.jpg);
+  background-image: url(../img/bespoke/hero.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat; }
+  @media screen and (max-width: 765px) {
+    .bespoke-hero {
+      background-size: cover;
+      background-position: 50%; } }
   .bespoke-hero .hero-text {
     display: flex;
     flex-direction: column;
@@ -229,11 +385,17 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
     color: white; }
+    @media screen and (max-width: 765px) {
+      .bespoke-hero .hero-text {
+        width: auto; } }
     .bespoke-hero .hero-text h1 {
-      font-family: "code-light";
+      font-family: "code-bold";
       font-size: 5rem;
       letter-spacing: 10px;
       margin-bottom: 0; }
+      @media screen and (max-width: 765px) {
+        .bespoke-hero .hero-text h1 {
+          font-size: 3rem; } }
       .bespoke-hero .hero-text h1::after {
         position: absolute;
         display: block;
@@ -243,16 +405,27 @@ body {
         width: 80%;
         height: 2px;
         background-color: #FCB543; }
+        @media screen and (max-width: 765px) {
+          .bespoke-hero .hero-text h1::after {
+            margin-left: 20px;
+            margin-top: 0; } }
     .bespoke-hero .hero-text h4 {
       font-family: "code-bold";
       font-size: 2rem;
       margin-bottom: 0; }
+      @media screen and (max-width: 765px) {
+        .bespoke-hero .hero-text h4 {
+          font-size: 1rem; } }
     .bespoke-hero .hero-text p {
       font-family: "bryantpro-light";
       font-size: 1.2rem;
       width: 43%;
       text-align: center;
       line-height: 25px; }
+      @media screen and (max-width: 765px) {
+        .bespoke-hero .hero-text p {
+          width: auto;
+          margin-top: 0; } }
     .bespoke-hero .hero-text .fa {
       font-size: 5rem;
       color: white;
@@ -277,28 +450,49 @@ body {
         width: 100%; }
     .gallery .gallery-item h1 {
       font-family: "code-bold"; }
+      @media screen and (max-width: 765px) {
+        .gallery .gallery-item h1 {
+          font-size: 0.9em; } }
     .gallery .gallery-item p {
       font-family: "bryantpro-regular"; }
+      @media screen and (max-width: 765px) {
+        .gallery .gallery-item p {
+          font-size: 0.8em; } }
+    .gallery .gallery-item button {
+      padding: 5px 10px;
+      border: 2px solid black;
+      background-color: transparent; }
 
 .size {
-  width: 100%;
-  height: 100%; }
+  width: 100%; }
+  @media screen and (max-width: 765px) {
+    .size {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; } }
   .size .size-image {
     background-image: url(../img/bespoke/fit.png);
-    background-size: 100% 100%;
-    background-position-y: -110px;
+    background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 100%;
     color: white; }
     .size .size-image .size-text {
       padding: 120px 110px;
       width: 24%; }
+      @media screen and (max-width: 765px) {
+        .size .size-image .size-text {
+          width: 80%;
+          padding: 10px 0;
+          margin: 0 auto; } }
       .size .size-image .size-text h1 {
         display: flex;
         flex-direction: column;
         font-family: 'code-light';
         font-size: 4rem; }
+        @media screen and (max-width: 765px) {
+          .size .size-image .size-text h1 {
+            font-size: 3rem; } }
         .size .size-image .size-text h1 span {
           font-size: 2.5rem; }
         .size .size-image .size-text h1::after {
@@ -325,14 +519,20 @@ body {
           font-family: "bryantpro-light"; }
   .size .sizes {
     width: 100%;
-    height: 100%;
     display: flex;
     justify-content: space-around;
-    align-items: center; }
+    align-items: center;
+    padding: 100px 0; }
+    @media screen and (max-width: 765px) {
+      .size .sizes {
+        flex-direction: column; } }
     .size .sizes h4 {
       font-family: "code-bold";
       color: darkgray;
       margin-bottom: 0; }
+      @media screen and (max-width: 765px) {
+        .size .sizes h4 {
+          margin: 0; } }
     .size .sizes h5 {
       font-family: "bryantpro-light";
       color: lightgray;
@@ -347,14 +547,30 @@ body {
         height: 20px;
         border: 1px solid darkgray;
         text-align: center; }
+    @media screen and (max-width: 765px) {
+      .size .sizes .width {
+        margin: 50px 0; } }
+    .size .sizes .width input, .size .sizes .arch input {
+      margin-bottom: -40px; }
+      @media screen and (max-width: 765px) {
+        .size .sizes .width input, .size .sizes .arch input {
+          margin-bottom: 0; } }
   .size a {
     position: relative;
-    top: -270px;
+    top: -50px;
     right: -80%;
     padding: 5px 10px;
     border: 2px solid black;
     text-decoration: none;
     color: black; }
+    @media screen and (max-width: 765px) {
+      .size a {
+        position: static;
+        margin-bottom: 20px; } }
+
+.timeline {
+  overflow: hidden;
+  background: #333; }
 
 .background {
   width: 100vw;
@@ -435,7 +651,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    transition: .5s all; }
+    transition: 1s all; }
     .background .timeline-year.active {
       opacity: 1; }
 
@@ -452,6 +668,10 @@ body {
     margin-top: 100px;
     margin-left: -8%;
     margin-bottom: 0; }
+    @media screen and (max-width: 1200px) {
+      .start h1 {
+        font-size: 5rem;
+        margin-top: 100px; } }
   .start p {
     color: white;
     font-family: bryantpro-regular;
@@ -472,6 +692,10 @@ body {
     margin-left: -20%;
     margin-bottom: 0;
     margin-top: 40px; }
+    @media screen and (max-width: 1200px) {
+      .y1890 h1 {
+        font-size: 5rem;
+        margin-top: 100px; } }
   .y1890 p {
     width: 45%;
     font-size: 1.5rem;
@@ -492,6 +716,10 @@ body {
     margin-left: -20%;
     margin-bottom: 0;
     margin-top: 70px; }
+    @media screen and (max-width: 1200px) {
+      .y1930 h1 {
+        font-size: 5rem;
+        margin-top: 130px; } }
   .y1930 p {
     width: 45%;
     font-size: 1.5rem;
@@ -512,6 +740,10 @@ body {
     margin-left: -20%;
     margin-bottom: 0;
     margin-top: 70px; }
+    @media screen and (max-width: 1200px) {
+      .y1982 h1 {
+        font-size: 5rem;
+        margin-top: 130px; } }
   .y1982 p {
     width: 45%;
     font-size: 1.5rem;
@@ -532,6 +764,10 @@ body {
     margin-left: -17%;
     margin-bottom: 0;
     margin-top: 120px; }
+    @media screen and (max-width: 1200px) {
+      .y2000 h1 {
+        font-size: 5rem;
+        margin-top: 170px; } }
   .y2000 p {
     width: 45%;
     font-size: 1.5rem;
@@ -552,6 +788,10 @@ body {
     margin-left: -12%;
     margin-bottom: 0;
     margin-top: 80px; }
+    @media screen and (max-width: 1200px) {
+      .today h1 {
+        font-size: 5rem;
+        margin-top: 120px; } }
   .today p {
     width: 45%;
     font-size: 1.5rem;
@@ -560,22 +800,36 @@ body {
     margin-left: 7%; }
 
 footer {
-  width: 98%;
+  width: 100%;
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-left: 25px;
   background-color: #FCE9D7; }
+  @media screen and (max-width: 765px) {
+    footer {
+      height: auto;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: auto;
+      padding: 25px; } }
   footer a {
     text-decoration: none;
     color: black; }
   footer h3 {
     font-family: "bryantpro-light";
     font-size: 1rem; }
+    @media screen and (max-width: 765px) {
+      footer h3 {
+        font-size: 1.5rem;
+        margin: 0 0 10px 0; } }
   footer span {
     font-family: "bryantpro-light";
     font-size: 1rem;
     margin: 0 10px; }
+    @media screen and (max-width: 765px) {
+      footer span {
+        font-size: 1.5rem;
+        margin-bottom: 10px; } }
 
 /*# sourceMappingURL=main.css.map */

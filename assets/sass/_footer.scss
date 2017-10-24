@@ -1,11 +1,18 @@
 footer {
-	width: 98%;
+	width: 100%;
 	height: 50px;
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
-	padding-left: 25px;
 	background-color: #FCE9D7;
+
+	@media screen and (max-width: $phone-bp) {
+		height: auto;
+		justify-content: center;
+		flex-wrap: wrap;
+		width: auto;
+		padding: 25px;
+	}
 
 	a {
 		text-decoration: none;
@@ -15,6 +22,11 @@ footer {
 	h3 {
 		font-family: "bryantpro-light";
 		font-size: 1rem;
+
+		@media screen and (max-width: $phone-bp) {
+			font-size: 1.5rem;
+			margin: 0 0 10px 0;
+		}		
 		
 	}
 
@@ -22,5 +34,10 @@ footer {
 		font-family: "bryantpro-light";
 		font-size: 1rem;
 		margin: 0 10px;
+
+		@media screen and (max-width: $phone-bp) {
+			font-size: 1.5rem;
+			margin-bottom: 10px;
+		}
 	}
 }

@@ -5,6 +5,9 @@
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 
+	@media screen and (max-width: $phone-bp) {
+		background-size: cover;
+	}
 
 	.hero-text {
 	    position: absolute;
@@ -16,12 +19,22 @@
 	    left: 50%;
 	    transform: translate(-50%, -50%);
 	    color: white;
+		
+		@media screen and (max-width: $phone-bp) {
+			transform: translate(-50%, -70%);
+		}
 
 	    h1 {
 	    	font-size: 10rem;
 	    	font-family: "code-light";
 	    	letter-spacing: 25px;
 	    	margin: 0;
+
+	    	@media screen and (max-width: $phone-bp) {
+				font-size: 4rem;
+				letter-spacing: 20px;
+				margin-left: 25px;
+			}
 
 	    	&:nth-child(2)::before {
 	    		position: absolute;
@@ -39,6 +52,11 @@
 		    font-family: "bryantpro-light";
 		    text-align: center;
 		    line-height: 25px;
+
+		    @media screen and (max-width: $phone-bp) {
+				font-size: 2.4rem;
+				line-height: normal;
+			}
 	    }
 	}
 }
@@ -48,6 +66,13 @@
 	height: 100%;
 	display: flex;
 
+	@media screen and (max-width: $phone-bp) {
+		height: auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
 	.details-text {
 		width: 50%;
 		height: 100%;
@@ -55,6 +80,10 @@
 	    flex-direction: column;
 	    justify-content: center;
 	    align-items: center;
+
+	    @media screen and (max-width: $phone-bp) {
+			height: auto;
+		}
 
 	    h2 {
 	    	font-family: "code-light";
@@ -64,6 +93,11 @@
 	    	span {
 	    		font-size: 4rem;
 	    		font-family: "code-bold";
+
+	    		@media screen and (max-width: $phone-bp) {
+	    			font-size: 2rem;
+	    			font-family: "code-light";
+	    		}
 	    	}
 
 	    	&::after {
@@ -73,6 +107,12 @@
 			    background-color: black;
 			    position: absolute;
 			    display: block;
+
+			    @media screen and (max-width: $phone-bp) {
+			    	width: 35%;
+			    	margin-left: 20px;
+			    	height: 1px;
+			    }
 	    	}
 	    }
 
@@ -80,6 +120,10 @@
 	    	font-family: "bryantpro-light";
 		    width: 35%;
 		    text-align: center;
+
+		    @media screen and (max-width: $phone-bp) {
+		    	display: none;
+		    }
 	    }
 	}
 
@@ -87,9 +131,17 @@
 		width: 50%;
 		height: 100%;
 
+		@media screen and (max-width: $phone-bp) {
+			height: auto;
+		}
+
 		img {
 			width: 100%;
 			height: 100%;
+
+			@media screen and (max-width: $phone-bp) {
+				height: auto;
+			}
 		}
 	}
 }
@@ -101,15 +153,40 @@
     display: flex;
     flex-direction: column;
 
+    @media screen and (max-width: $phone-bp) {
+		margin-top: 0;
+		height: auto;
+		margin-bottom: 10px;
+	}
+
     h2 {
     	width: 50%;
     	margin-left: 25px;
     	margin-bottom: 100px;
     	font-family: "bryantpro-light";
 
+    	@media screen and (max-width: $phone-bp) {
+			width: 100%;
+			text-align: center;
+			font-size: 2rem;
+			margin: 0;
+		}
+
     	span {
     		font-family: "bryantpro-regular";
     	}
+
+    	@media screen and (max-width: $phone-bp) {
+			&::before {
+			    position: absolute;
+			    text-align: center;
+			    right: 0;
+			    content: "";
+			    width: 100%;
+			    height: 2px;
+			    background-color: black;
+	    	}
+		}
 
     	&::after {
 		    position: absolute;
@@ -119,6 +196,10 @@
 		    width: 50%;
 		    height: 2px;
 		    background-color: black;
+
+		    @media screen and (max-width: $phone-bp) {
+				position: relative;
+			}
 		
     	}
     }
@@ -129,20 +210,52 @@
 		display: flex;
 		justify-content: space-around;
 
-    	.image {
+	   	.image {
 			width: 30%;
+
+			@media screen and (max-width: $phone-bp) {
+				width: 100%;
+			}
 
 			img {
 				width: 100%;
 				height: 100%;
 			}
     	}
+		
+		@media screen and (max-width: $phone-bp) {
+
+			.history-old {
+				height: 240px;
+				overflow: hidden;
+
+				img {
+					height: auto;
+					position: relative;
+					top: -160px;
+				}
+			}
+
+			.history-second {
+				display: none;
+			}
+
+			.history-third {
+				display: none;
+			}
+		}	
+
+
     }
 }
 
 .steps {
 	width: 100%;
 	height: 100%;
+
+	@media screen and (max-width: $phone-bp) {
+		height: auto;
+	}
 
 	img {
 		width: 100%;
@@ -156,6 +269,13 @@
 	display: flex;
 	justify-content: space-around;
 
+	@media screen and (max-width: $phone-bp) {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: auto;
+	}
+
 	.text {
 		width: 30%;
 		height: 100%;
@@ -164,9 +284,18 @@
 		justify-content: center;
 		align-items: center;
 
+		@media screen and (max-width: $phone-bp) {
+			width: auto;
+			height: auto;
+		}
+
 		h2 {
 			font-family: "code-light";
 		    text-align: center;
+
+		    @media screen and (max-width: $phone-bp) {
+				font-size: 2rem;
+			}
 
 		    span {
 	    	    font-family: "code-light";
@@ -181,6 +310,10 @@
 			    position: absolute;
 			    left: 8%;
 			    display: block;
+
+			    @media screen and (max-width: $phone-bp) {
+					width: 80%;
+				}
 	    	}
 		}
 
@@ -188,31 +321,51 @@
 			font-family: "bryantpro-light";
 		    width: 50%;
 		    text-align: center;
-		}
-	}
 
-	.image {
-		width: 30%;
-		height: 100%;
+		    @media screen and (max-width: $phone-bp) {
+				width: auto;
+				font-size: 1.5rem;
+				padding: 0 25px;
+				margin-top: 0;
+			}
+		}
 	}
 	
 	:nth-child(2) {
 		display: flex;
 		align-items: center;
-		
+		width: 25%;
+
 		img {
 			width: 100%;
-			height: 70%;
+
+			@media screen and (max-width: $phone-bp) {
+				position: relative;
+				top: -130px;
+			}
 		}
 	}
 
 	:nth-child(3) {
 		display: flex;
 		align-items: center;
+		width: 30%;
 
 		img {
 			width: 100%;
-			height: 90%;
+
+			@media screen and (max-width: $phone-bp) {
+				position: relative;
+				top: 110px;
+			}
+		}
+	}
+
+	.image {
+		@media screen and (max-width: $phone-bp) {
+			height: 240px;
+			width: 100%;
+			overflow: hidden;
 		}
 	}
 }

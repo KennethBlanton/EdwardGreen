@@ -28,3 +28,14 @@ body {
     font-family: "code-light";
     src: url(../fonts/CODE-Light.otf);
 }
+
+.hamburger {
+  display: flex;
+  padding: 0;
+}
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  background-color: white;
+}
+
+button:focus {outline:0;}
