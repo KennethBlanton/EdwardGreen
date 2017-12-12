@@ -11,4 +11,5 @@ document.querySelector('.member').addEventListener('click',function() {
 $(function() {
 	TweenMax.from('.hero-text h1', 1, {opacity: 0, top: "-20px"});
 	TweenMax.from('.hero-text p', 1, {opacity: 0, delay: 0.7});
-})
+});
+

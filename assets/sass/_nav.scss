@@ -1,12 +1,15 @@
 .nav {
-	position: fixed;
+	position: absolute;
 	display: none;
 	width: 100%;
 	height: 50px;
 	top: 0;
+	background-color: transparent;
 	justify-content: space-between;
-	margin: 15px 0;
+	padding: 15px 0;
 	z-index: 1000;
+	transition: all 0.2s linear;
+
 
 	@media screen and (min-width: 481px) {
 		display: flex;
@@ -167,7 +170,13 @@
 }
 
 
-
+.nav.active {
+	background-color: white;
+	
+	a, .logo, .nav-items {
+		color: black;
+	}
+}
 
 
 
