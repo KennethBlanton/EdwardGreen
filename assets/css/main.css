@@ -430,7 +430,8 @@ button:focus {
       overflow: hidden; } }
 
 .gallery {
-  margin-top: 80px; }
+  margin-top: 80px;
+  display: flex; }
 
 .bespoke-hero {
   display: flex;
@@ -505,14 +506,17 @@ button:focus {
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center; }
+  width: 70%; }
   .gallery .gallery-item {
     border: 3px solid black;
     width: 20%;
     padding: 10px;
     margin: 10px;
-    text-align: center; }
+    text-align: center;
+    order: -1;
+    max-height: 500px; }
+    .gallery .gallery-item.hide {
+      display: none; }
     @media screen and (max-width: 475px) {
       .gallery .gallery-item {
         width: 90%; } }
@@ -640,6 +644,31 @@ button:focus {
       .size a {
         position: static;
         margin-bottom: 20px; } }
+
+.filter-container {
+  width: 30%; }
+
+.filter {
+  padding: 20px 30px;
+  border: 1px solid black; }
+
+.galleryFilter {
+  display: flex; }
+
+.filterEntry {
+  display: flex;
+  align-item: center;
+  padding-top: 10px; }
+  .filterEntry .checkbox {
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    margin-right: 5px; }
+    .filterEntry .checkbox.checked {
+      background: blue; }
+  .filterEntry .filterName {
+    margin: 0; }
 
 .timeline {
   overflow: hidden;

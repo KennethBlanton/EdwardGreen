@@ -1,5 +1,6 @@
 .gallery {
 	margin-top: 80px;
+	display:flex;
 }
 
 .bespoke-hero {
@@ -94,15 +95,23 @@
 .gallery {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-
+	// justify-content: center;
+	// align-items: center;
+	width:70%;
 	.gallery-item {
 		border: 3px solid black;
 		width: 20%;
 	    padding: 10px;
 	    margin: 10px;
 	    text-align: center;
+	    order:-1;
+	    max-height:500px;
+
+
+	    &.hide {
+	    	display:none;
+
+	    }
 
 	    @media screen and (max-width: $phone-bp) {
 	    	width: 90%;
@@ -298,6 +307,34 @@
 
 	    }
     }
+}
+.filter-container {
+	width:30%;
+}
+.filter {
+	padding: 20px 30px;
+	border: 1px solid black;
+}
+.galleryFilter {
+	display:flex;
+}
+.filterEntry {
+	display: flex;
+	align-item: center;
+	padding-top:10px;
+	.checkbox {
+		box-sizing:border-box;
+		width:20px;
+		height:20px;
+		border: 1px solid black;
+		margin-right: 5px;
+		&.checked {
+			background:blue;
+		}
+	}
+	.filterName {
+		margin:0;
+	}
 }
 
 
