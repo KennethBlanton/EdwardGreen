@@ -429,10 +429,6 @@ button:focus {
       width: 100%;
       overflow: hidden; } }
 
-.gallery {
-  margin-top: 80px;
-  display: flex; }
-
 .bespoke-hero {
   display: flex;
   width: 100%;
@@ -503,42 +499,81 @@ button:focus {
       position: absolute;
       bottom: -200px; }
 
-.gallery {
+.galleryFilter {
   display: flex;
-  flex-wrap: wrap;
-  width: 70%; }
-  .gallery .gallery-item {
-    border: 3px solid black;
-    width: 20%;
-    padding: 10px;
-    margin: 10px;
-    text-align: center;
-    order: -1;
-    max-height: 500px; }
-    .gallery .gallery-item.hide {
-      display: none; }
-    @media screen and (max-width: 475px) {
-      .gallery .gallery-item {
-        width: 90%; } }
-    .gallery .gallery-item .item-image {
-      width: 100%; }
-      .gallery .gallery-item .item-image img {
-        height: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0; }
+  .galleryFilter .filterContainer {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    padding-bottom: 50px; }
+    .galleryFilter .filterContainer .filter {
+      width: 100%;
+      height: 100%;
+      flex-wrap: wrap;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .galleryFilter .filterContainer .filter .filterEntry {
+        display: flex;
+        position: relative;
+        width: 110px;
+        padding-left: 20px; }
+        .galleryFilter .filterContainer .filter .filterEntry .checkbox {
+          box-sizing: border-box;
+          width: 20px;
+          height: 20px;
+          border: 1px solid black;
+          margin-right: 5px; }
+          .galleryFilter .filterContainer .filter .filterEntry .checkbox .checkbox-check {
+            display: none; }
+          .galleryFilter .filterContainer .filter .filterEntry .checkbox.checked {
+            border: 3px solid green; }
+            .galleryFilter .filterContainer .filter .filterEntry .checkbox.checked .checkbox-check {
+              display: block; }
+        .galleryFilter .filterContainer .filter .filterEntry .filterName {
+          margin: 0;
+          font-family: "bryantpro-regular"; }
+  .galleryFilter .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%; }
+    .galleryFilter .gallery .gallery-item {
+      border: 3px solid black;
+      width: 20%;
+      padding: 10px;
+      margin: 10px;
+      text-align: center;
+      order: -1;
+      max-height: 500px; }
+      .galleryFilter .gallery .gallery-item.hide {
+        display: none; }
+      @media screen and (max-width: 475px) {
+        .galleryFilter .gallery .gallery-item {
+          width: 90%; } }
+      .galleryFilter .gallery .gallery-item .item-image {
         width: 100%; }
-    .gallery .gallery-item h1 {
-      font-family: "code-bold"; }
-      @media screen and (max-width: 765px) {
-        .gallery .gallery-item h1 {
-          font-size: 0.9em; } }
-    .gallery .gallery-item p {
-      font-family: "bryantpro-regular"; }
-      @media screen and (max-width: 765px) {
-        .gallery .gallery-item p {
-          font-size: 0.8em; } }
-    .gallery .gallery-item button {
-      padding: 5px 10px;
-      border: 2px solid black;
-      background-color: transparent; }
+        .galleryFilter .gallery .gallery-item .item-image img {
+          height: 100%;
+          width: 100%; }
+      .galleryFilter .gallery .gallery-item h1 {
+        font-family: "code-bold"; }
+        @media screen and (max-width: 765px) {
+          .galleryFilter .gallery .gallery-item h1 {
+            font-size: 0.9em; } }
+      .galleryFilter .gallery .gallery-item p {
+        font-family: "bryantpro-regular"; }
+        @media screen and (max-width: 765px) {
+          .galleryFilter .gallery .gallery-item p {
+            font-size: 0.8em; } }
+      .galleryFilter .gallery .gallery-item button {
+        padding: 5px 10px;
+        border: 2px solid black;
+        background-color: transparent; }
 
 .size {
   width: 100%; }
@@ -644,31 +679,6 @@ button:focus {
       .size a {
         position: static;
         margin-bottom: 20px; } }
-
-.filter-container {
-  width: 30%; }
-
-.filter {
-  padding: 20px 30px;
-  border: 1px solid black; }
-
-.galleryFilter {
-  display: flex; }
-
-.filterEntry {
-  display: flex;
-  align-item: center;
-  padding-top: 10px; }
-  .filterEntry .checkbox {
-    box-sizing: border-box;
-    width: 20px;
-    height: 20px;
-    border: 1px solid black;
-    margin-right: 5px; }
-    .filterEntry .checkbox.checked {
-      background: blue; }
-  .filterEntry .filterName {
-    margin: 0; }
 
 .timeline {
   overflow: hidden;

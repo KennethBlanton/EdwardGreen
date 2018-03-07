@@ -1,7 +1,7 @@
-.gallery {
-	margin-top: 80px;
-	display:flex;
-}
+// .gallery {
+// 	margin-top: 80px;
+// 	display:flex;
+// }
 
 .bespoke-hero {
 	display: flex;
@@ -91,61 +91,116 @@
 	}
 }
 
+.galleryFilter {
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 50px 0;
 
-.gallery {
-	display: flex;
-	flex-wrap: wrap;
-	// justify-content: center;
-	// align-items: center;
-	width:70%;
-	.gallery-item {
-		border: 3px solid black;
-		width: 20%;
-	    padding: 10px;
-	    margin: 10px;
-	    text-align: center;
-	    order:-1;
-	    max-height:500px;
+	.filterContainer {
+		display: flex;
+	    width: 100%;
+	    height: 200px;
+	    padding-bottom: 50px;
+	    
+		.filter {
+			width: 100%;
+		    height: 100%;
+		    flex-wrap: wrap;
+		    position: relative;
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+
+			.filterEntry {
+			    display: flex;
+			    position: relative;
+			    width: 110px;
+			    padding-left: 20px;
+
+				.checkbox {
+					box-sizing:border-box;
+					width:20px;
+					height:20px;
+					border: 1px solid black;
+					margin-right: 5px;
+
+					.checkbox-check {
+						display: none;
+					}
+
+					&.checked {
+						border: 3px solid green;
+
+						.checkbox-check {
+							display: block;
+						}
+					}
+				}
+
+				.filterName {
+					margin:0;
+					font-family: "bryantpro-regular";
+				}
+			}
+		}
+	}
+
+	.gallery {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		width: 100%;
+
+		.gallery-item {
+			border: 3px solid black;
+			width: 20%;
+		    padding: 10px;
+		    margin: 10px;
+		    text-align: center;
+		    order: -1;
+		    max-height: 500px;
 
 
-	    &.hide {
-	    	display:none;
+		    &.hide {
+		    	display:none;
 
-	    }
-
-	    @media screen and (max-width: $phone-bp) {
-	    	width: 90%;
-	    }
-
-	    .item-image {
-	    	width: 100%;
-
-	    	img {
-	    		height: 100%;
-	    		width: 100%;
-	    	}
-	    }
-
-	    h1 {
-	    	font-family: "code-bold";
-		    @media screen and (max-width: $tablet-bp) {
-		    	font-size: 0.9em;
 		    }
-	    }
 
-	    p {
-	    	font-family: "bryantpro-regular";
-		    @media screen and (max-width: $tablet-bp) {
-		    	font-size: 0.8em;
+		    @media screen and (max-width: $phone-bp) {
+		    	width: 90%;
 		    }
-	    }
 
-	    button {
-	    	padding: 5px 10px;
-		    border: 2px solid black;
-		    background-color: transparent;
-	    }
-		
+		    .item-image {
+		    	width: 100%;
+
+		    	img {
+		    		height: 100%;
+		    		width: 100%;
+		    	}
+		    }
+
+		    h1 {
+		    	font-family: "code-bold";
+			    @media screen and (max-width: $tablet-bp) {
+			    	font-size: 0.9em;
+			    }
+		    }
+
+		    p {
+		    	font-family: "bryantpro-regular";
+			    @media screen and (max-width: $tablet-bp) {
+			    	font-size: 0.8em;
+			    }
+		    }
+
+		    button {
+		    	padding: 5px 10px;
+			    border: 2px solid black;
+			    background-color: transparent;
+		    }
+			
+		}
 	}
 }
 
@@ -308,36 +363,6 @@
 	    }
     }
 }
-.filter-container {
-	width:30%;
-}
-.filter {
-	padding: 20px 30px;
-	border: 1px solid black;
-}
-.galleryFilter {
-	display:flex;
-}
-.filterEntry {
-	display: flex;
-	align-item: center;
-	padding-top:10px;
-	.checkbox {
-		box-sizing:border-box;
-		width:20px;
-		height:20px;
-		border: 1px solid black;
-		margin-right: 5px;
-		&.checked {
-			background:blue;
-		}
-	}
-	.filterName {
-		margin:0;
-	}
-}
-
-
 
 
 

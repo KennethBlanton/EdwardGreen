@@ -26,7 +26,9 @@ function populateFilter (shoeNames) {
 	for (var i = shoeNames.length - 1; i >= 0; i--) {
 		filter.innerHTML += `
 			<div class="filterEntry">
-				<div class="checkbox"></div>
+				<div class="checkbox">
+					<i class="fas fa-check checkbox-check"></i>
+				</div>
 				<p class="filterName">${shoeNames[i]}</p>
 			</div>	
 		`
@@ -51,6 +53,7 @@ document.querySelector('.filter').addEventListener('click',function(e) {
 			this.children[i].children[0].classList.remove('checked');
 		}
 		e.target.classList.add('checked');
+		e.target.classList.add('active');
 		filterResults(e.target, this.children)
 	}
 })
