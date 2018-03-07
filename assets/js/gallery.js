@@ -40,13 +40,17 @@ function filterResults(checkbox, checkboxes) {
 		for (var i = shoeNodes.length - 1; i >= 0; i--) {
 			if(shoeNodes[i].children[1].innerHTML === checkbox.parentNode.children[1].innerHTML) {
 				shoeNodes[i].classList.remove('hide');
+				shoeNodes[i].classList.add('active');
 			} else {
 				shoeNodes[i].classList.add('hide');
+				shoeNodes[i].classList.remove('active');
 			}
 		}
+		let activeShoe = document.querySelectorAll('.gallery-item.active');
+		TweenMax.staggerFromTo(activeShoe, 0.3, {opacity: 0, top: "-20px"}, {opacity: 1, top: 0}, 0.1);
 	}
-	
 }
+
 document.querySelector('.filter').addEventListener('click',function(e) {
 	if(e.target.classList.contains('checkbox')) {
 		for (var i = this.children.length - 1; i >= 0; i--) {
