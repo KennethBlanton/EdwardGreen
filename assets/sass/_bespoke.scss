@@ -8,12 +8,13 @@
 	width: 100%;
 	height: 100%;
 	background-image: url(../img/bespoke/hero.jpg);
-	background-size: 100% 100%;
+	background-size: cover;
+	background-position: center;
 	background-repeat: no-repeat;
 
 	@media screen and (max-width: $tablet-bp) {
 		background-size: cover; 
-		background-position: 50%;
+		background-position: center;
 	}
 
 	.hero-text {
@@ -46,7 +47,7 @@
 		    &::after {
 	    		position: absolute;
 				display: block;
-				margin-left: -12px;
+				left: 10%;
 				margin-top: 15px;
 	    		content: "";
 	    		width: 80%;
@@ -54,8 +55,9 @@
 	    		background-color: #FCB543;
 
 			    @media screen and (max-width: $tablet-bp) {
-					margin-left: 20px;
+					// margin-left: 20px;
 					margin-top: 0;
+					// left: 0;
 			    }
 	    	}
 	    }
@@ -327,12 +329,32 @@
 	    	justify-content: center;
 	    	align-items: center;
 
+	    	.image {
+
+	    		img {
+	    			width: 100%;
+	    		}
+	    	}
+
 	    	input {
 	    		width: 20%;
 			    height: 20px;
 			    border: 1px solid darkgray;
 			    text-align: center;
 
+	    	}
+	    }
+
+	    .length {
+
+	    	.image {
+		    	width: 40%;
+	    	}
+	    }
+
+	    .width, .arch {
+	    	.image {
+		    	width: 100%;
 	    	}
 	    }
 
@@ -360,6 +382,7 @@
 	    border: 2px solid black;
 	    text-decoration: none;
 	    color: black;
+	    font-family: "bryantpro-regular";
 
 	    @media screen and (max-width: $tablet-bp) {
 	    	position: static;

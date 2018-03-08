@@ -20,7 +20,7 @@
 			right:110%;
 		}
 		.move {
-			width: 30vw;
+			width: 29vw;
 		    height: 5px;
 		    background: white;
 		    position: absolute;
@@ -58,7 +58,7 @@
 			opacity:1;
 		}
 		.move {
-			width: 30vw;
+			width: 29vw;
 		    height: 5px;
 		    background: white;
 		    position: absolute;
@@ -96,7 +96,7 @@
 		// 	opacity:1;
 		// }
 		.move {
-			width: 30vw;
+			width: 29vw;
 		    height: 5px;
 		    background: white;
 		    position: absolute;
@@ -137,214 +137,146 @@
 		&.active {
 			opacity:1;
 		}
+
+		.text {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 55%;
+			height: 305px;
+			transform: translate(-35%, -32%);
+
+			 @media screen and (max-width: $timeline-first) {
+		    	transform: translate( -30%, -20%);
+		    }
+
+		    @media screen and (max-width: $tablet-bp) {
+	    	    transform: translate(-16%, -13%);
+		    }
+
+			h1 {
+				color: white;
+			    font-family: "code-bold";
+			    font-size: 8rem;
+			    letter-spacing: 5px;
+				margin: 0;
+				padding-bottom: 20px;
+
+
+			    @media screen and (max-width: $timeline-first) {
+			    	font-size: 5rem;
+			    }
+
+			    @media screen and (max-width: $tablet-bp) {
+			    	font-size: 4rem;
+			    }
+			}
+
+			p {
+				width: 100%;
+				font-size: 1.5rem;
+				color: white;
+			    font-family: "bryantpro-regular";
+			    text-transform: uppercase;
+				margin: 0;
+
+				@media screen and (max-width: $tablet-bp) {
+			    	font-size: 1rem;
+			    }
+			}
+		}
 	}
 
 }
 
 
 .start {
-	background-image: url(../img/home/history-old.jpg);
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/home/history-old.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0;
 
-	h1 {
-	    color: white;
-	    font-family: "code-bold";
-	    letter-spacing: 10px;
-	    font-size: 7rem;
-	    margin-top: 100px;
-	    margin-left: -8%;
-	    margin-bottom: 0;
+	.start-text {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 50%;
+		height: 305px;
+		transform: translate(-60%, -30%);
 
-	    @media screen and (max-width: $timeline-first) {
-	    	font-size: 5rem;
-	    	margin-top: 100px;
+		@media screen and (max-width: $tablet-bp) {
+	    	transform: translate(-80%, -30%);
 	    }
 
-	    @media screen and (max-width: $tablet-bp) {
-	    	// font-size: 3rem;
-	    	// margin-top: -100px;
-	    }
-	}
+		h1 {
+			color: white;
+		    font-family: "code-bold";
+			letter-spacing: 10px;
+			margin: 0;
+			padding-bottom: 20px;
+		    font-size: 7rem;
 
-	p {
-	    color: white;
-	    font-family: bryantpro-regular;
-	    text-transform: uppercase;
-	    font-size: 1.2rem;
-	    margin-left: -5%;
+		    @media screen and (max-width: $tablet-bp) {
+		    	font-size: 4rem;
+		    }
+		}
+
+		p {
+			font-size: 1.2rem;
+			width: 100%;
+			color: white;
+		    font-family: "bryantpro-regular";
+		    text-transform: uppercase;
+			margin: 0;
+
+			@media screen and (max-width: $tablet-bp) {
+		    	font-size: 1rem;
+		    }
+		}
 	}
 }
 
 .y1890 {
-	background-image: url(../img/timeline/timeline-1890.jpg);
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/timeline/timeline-1890.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0;
 
-	h1 {
-	    font-family: "code-bold";
-	    color: white;
-	    letter-spacing: 5px;
-	    font-size: 8rem;
-	    margin-left: -20%;
-	    margin-bottom: 0;
-	    margin-top: 40px;
-
-	    @media screen and (max-width: $timeline-first) {
-	    	font-size: 5rem;
-	    	margin-top: 100px;
-	    }
-
-	    // @media screen and (max-width: $tablet-bp) {
-	    // 	font-size: 4rem;
-	    // }
-	}
-
-	p {
-	    width: 45%;
-	    font-size: 1.5rem;
-	    font-family: bryantpro-light;
-	    color: white;
-	    margin-left: 7%;
-	}
+	// .text {
+	// 	width: 50%;
+	// 	position: absolute;
+	// 	top: 50%;
+	// 	left: 50%;
+	// 	// transform: translate(-50%, -30%);
+	// }
 }
 
 .y1930 {
-	background-image: url(../img/timeline/timeline-1930.png);
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/timeline/timeline-1930.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0;
-
-	h1 {
-	    font-family: "code-bold";
-	    color: white;
-	    letter-spacing: 5px;
-	    font-size: 8rem;
-	    margin-left: -20%;
-	    margin-bottom: 0;
-	    margin-top: 70px;
-
-	    @media screen and (max-width: $timeline-first) {
-	    	font-size: 5rem;
-	    	margin-top: 130px;
-	    }
-
-	    // @media screen and (max-width: $tablet-bp) {
-	    // 	font-size: 4rem;
-	    // }
-	}
-
-	p {
-	    width: 45%;
-	    font-size: 1.5rem;
-	    font-family: bryantpro-light;
-	    color: white;
-	    margin-left: 7%;
-	}
 }
 
 .y1982 {
-	background-image: url(../img/timeline/timeline-1982.png);
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/timeline/timeline-1982.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0;
-
-	h1 {
-	    font-family: "code-bold";
-	    color: white;
-	    letter-spacing: 5px;
-	    font-size: 8rem;
-	    margin-left: -20%;
-	    margin-bottom: 0;
-	    margin-top: 70px;
-
-	    @media screen and (max-width: $timeline-first) {
-	    	font-size: 5rem;
-	    	margin-top: 130px;
-	    }
-
-	    // @media screen and (max-width: $tablet-bp) {
-	    // 	font-size: 4rem;
-	    // }
-	}
-
-	p {
-	    width: 45%;
-	    font-size: 1.5rem;
-	    font-family: bryantpro-light;
-	    color: white;
-	    margin-left: 7%;
-	}
 }
 
 .y2000 {
-	background-image: url(../img/timeline/timeline-2000.png);
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/timeline/timeline-2000.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0;
-
-	h1 {
-	    font-family: "code-bold";
-	    color: white;
-	    letter-spacing: 5px;
-	    font-size: 8rem;
-	    margin-left: -17%;
-	    margin-bottom: 0;
-	    margin-top: 120px;
-
-	    @media screen and (max-width: $timeline-first) {
-	    	font-size: 5rem;
-	    	margin-top: 170px;
-	    }
-
-	    // @media screen and (max-width: $tablet-bp) {
-	    // 	font-size: 4rem;
-	    // }
-	}
-
-	p {
-	    width: 45%;
-	    font-size: 1.5rem;
-	    font-family: bryantpro-light;
-	    color: white;
-	    margin-left: 7%;
-	}
 }
 
 .today {
-	background-image: url(../img/timeline/timeline-now.png);
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/timeline/timeline-now.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0;
-
-	h1 {
-	    font-family: "code-bold";
-	    color: white;
-	    letter-spacing: 5px;
-	    font-size: 8rem;
-        margin-left: -12%;
-	    margin-bottom: 0;
-	    margin-top: 80px;
-
-	    @media screen and (max-width: $timeline-first) {
-	    	font-size: 5rem;
-	    	margin-top: 120px;
-	    }
-
-	    // @media screen and (max-width: $tablet-bp) {
-	    // 	font-size: 4rem;
-	    // }
-	}
-
-	p {
-	    width: 45%;
-	    font-size: 1.5rem;
-	    font-family: bryantpro-light;
-	    color: white;
-	    margin-left: 7%;
-	}
 }
 
 

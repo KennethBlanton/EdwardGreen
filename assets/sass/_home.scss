@@ -36,6 +36,10 @@
 				font-size: 4rem;
 				letter-spacing: 20px;
 				margin-left: 25px;
+
+				&:nth-child(2) {
+					margin-top: 25px;
+				}
 			}
 
 	    	&:nth-child(2)::before {
@@ -49,7 +53,7 @@
 	    		background-color: #FCB543;
 
 	    		@media screen and (max-width: $tablet-bp) {
-	    			top: -5px;
+	    			top: -18px;
 	    		}
 	    	}
 	    }
@@ -69,15 +73,17 @@
 }
 
 .details {
-	width: 100%;
-	height: 100%;
 	display: flex;
+	align-items: center;
+	margin: 25px 0;
+	width: 100%;
 
 	@media screen and (max-width: $tablet-bp) {
 		height: auto;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		margin: 55px 0;
 	}
 
 	.details-text {
@@ -112,6 +118,7 @@
 	    		content: "";
 			    width: 50%;
 			    height: 3px;
+			    left: 25%;
 			    background-color: black;
 			    position: absolute;
 			    display: block;
@@ -157,13 +164,14 @@
 
 .history {
     width: 100%;
-    height: 100%;
-    margin-top: 100px;
+    margin: 25px 0;
+    
     display: flex;
+    justify-content: center;
     flex-direction: column;
 
     @media screen and (max-width: $tablet-bp) {
-		margin-top: 0;
+		// margin-top: 100px;
 		height: auto;
 		margin-bottom: 10px;
 	}
@@ -171,7 +179,7 @@
     h2 {
     	width: 50%;
     	margin-left: 25px;
-    	margin-bottom: 100px;
+    	// margin-bottom: 100px;
     	font-family: "bryantpro-light";
 
     	@media screen and (max-width: $tablet-bp) {
@@ -179,6 +187,7 @@
 			text-align: center;
 			font-size: 2rem;
 			margin: 0;
+			padding: 25px 0;
 		}
 
     	span {
@@ -192,6 +201,7 @@
 			    right: 0;
 			    content: "";
 			    width: 100%;
+			    margin-top: -25px;
 			    height: 2px;
 			    background-color: black;
 	    	}
@@ -215,12 +225,13 @@
 
     .images {
     	width: 100%;
-    	height: 70%;
 		display: flex;
 		justify-content: space-around;
+		align-items: center;
 
 	   	.image {
 			width: 30%;
+			height: 400px;
 
 			@media screen and (max-width: $tablet-bp) {
 				width: 100%;
@@ -228,14 +239,34 @@
 
 			img {
 				width: 100%;
-				height: 100%;
 			}
+    	}
+
+    	.history-old {
+			background-image: url(../img/home/history-old.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+    	}
+
+    	.history-second {
+			background-image: url(../img/home/history-2.png);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+    	}
+
+    	.history-third {
+			background-image: url(../img/home/history-3.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
     	}
 		
 		@media screen and (max-width: $tablet-bp) {
 
 			.history-old {
-				height: 240px;
+				// height: 240px;
 				overflow: hidden;
 
 				img {
@@ -260,7 +291,6 @@
 
 .steps {
 	width: 100%;
-	height: 100%;
 
 	@media screen and (max-width: $tablet-bp) {
 		height: auto;
@@ -268,15 +298,15 @@
 
 	img {
 		width: 100%;
-		height: 100%;
 	}
 }
 
 .style {
 	width: 100%;
-	height: 100%;
 	display: flex;
+	align-items: center;
 	justify-content: space-around;
+	margin: 25px 0;
 
 	@media screen and (max-width: $tablet-bp) {
 		flex-direction: column;
@@ -292,6 +322,7 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		
 
 		@media screen and (max-width: $tablet-bp) {
 			width: auto;
@@ -301,14 +332,16 @@
 		h2 {
 			font-family: "code-light";
 		    text-align: center;
-
-		    @media screen and (max-width: $tablet-bp) {
-				font-size: 2rem;
-			}
+		    max-width: 580px;
+			font-size: 2rem;
 
 		    span {
 	    	    font-family: "code-light";
 			    font-size: 4em;
+		    }
+
+		    @media (min-width: $tablet-bp) and (max-width: $desktop-bp) {
+		    	font-size: 1.5em;
 		    }
 
 		    &::after {
@@ -328,12 +361,12 @@
 
 		p {
 			font-family: "bryantpro-light";
-		    width: 50%;
+		    width: 100%;
 		    text-align: center;
-
+			font-size: 1.5em;
+			
 		    @media screen and (max-width: $tablet-bp) {
 				width: auto;
-				font-size: 1.5rem;
 				padding: 0 25px;
 				margin-top: 0;
 			}

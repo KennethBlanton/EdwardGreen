@@ -95,14 +95,15 @@ button:focus {
   visibility: hidden;
   overflow: hidden;
   height: 100vh;
-  width: 0%;
+  width: 50%;
+  left: -100%;
   top: 70px;
   background-color: black;
   z-index: 1000;
   transition: all 0.4s; }
   .hamburger-menu.active {
     visibility: visible;
-    width: 50%; }
+    left: 0; }
   .hamburger-menu ul {
     color: white;
     margin: 0;
@@ -195,7 +196,9 @@ button:focus {
         .hero .hero-text h1 {
           font-size: 4rem;
           letter-spacing: 20px;
-          margin-left: 25px; } }
+          margin-left: 25px; }
+          .hero .hero-text h1:nth-child(2) {
+            margin-top: 25px; } }
       .hero .hero-text h1:nth-child(2)::before {
         position: absolute;
         display: block;
@@ -207,7 +210,7 @@ button:focus {
         background-color: #FCB543; }
         @media screen and (max-width: 765px) {
           .hero .hero-text h1:nth-child(2)::before {
-            top: -5px; } }
+            top: -18px; } }
     .hero .hero-text p {
       font-size: 1.2rem;
       font-family: "bryantpro-light";
@@ -219,15 +222,17 @@ button:focus {
           line-height: normal; } }
 
 .details {
-  width: 100%;
-  height: 100%;
-  display: flex; }
+  display: flex;
+  align-items: center;
+  margin: 25px 0;
+  width: 100%; }
   @media screen and (max-width: 765px) {
     .details {
       height: auto;
       display: flex;
       align-items: center;
-      justify-content: center; } }
+      justify-content: center;
+      margin: 55px 0; } }
   .details .details-text {
     width: 50%;
     height: 100%;
@@ -254,6 +259,7 @@ button:focus {
         content: "";
         width: 50%;
         height: 3px;
+        left: 25%;
         background-color: black;
         position: absolute;
         display: block; }
@@ -278,26 +284,25 @@ button:focus {
 
 .history {
   width: 100%;
-  height: 100%;
-  margin-top: 100px;
+  margin: 25px 0;
   display: flex;
+  justify-content: center;
   flex-direction: column; }
   @media screen and (max-width: 765px) {
     .history {
-      margin-top: 0;
       height: auto;
       margin-bottom: 10px; } }
   .history h2 {
     width: 50%;
     margin-left: 25px;
-    margin-bottom: 100px;
     font-family: "bryantpro-light"; }
     @media screen and (max-width: 765px) {
       .history h2 {
         width: 100%;
         text-align: center;
         font-size: 2rem;
-        margin: 0; } }
+        margin: 0;
+        padding: 25px 0; } }
     .history h2 span {
       font-family: "bryantpro-regular"; }
     @media screen and (max-width: 765px) {
@@ -307,6 +312,7 @@ button:focus {
         right: 0;
         content: "";
         width: 100%;
+        margin-top: -25px;
         height: 2px;
         background-color: black; } }
     .history h2::after {
@@ -322,20 +328,34 @@ button:focus {
           position: relative; } }
   .history .images {
     width: 100%;
-    height: 70%;
     display: flex;
-    justify-content: space-around; }
+    justify-content: space-around;
+    align-items: center; }
     .history .images .image {
-      width: 30%; }
+      width: 30%;
+      height: 400px; }
       @media screen and (max-width: 765px) {
         .history .images .image {
           width: 100%; } }
       .history .images .image img {
-        width: 100%;
-        height: 100%; }
+        width: 100%; }
+    .history .images .history-old {
+      background-image: url(../img/home/history-old.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center; }
+    .history .images .history-second {
+      background-image: url(../img/home/history-2.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center; }
+    .history .images .history-third {
+      background-image: url(../img/home/history-3.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center; }
     @media screen and (max-width: 765px) {
       .history .images .history-old {
-        height: 240px;
         overflow: hidden; }
         .history .images .history-old img {
           height: auto;
@@ -347,20 +367,19 @@ button:focus {
         display: none; } }
 
 .steps {
-  width: 100%;
-  height: 100%; }
+  width: 100%; }
   @media screen and (max-width: 765px) {
     .steps {
       height: auto; } }
   .steps img {
-    width: 100%;
-    height: 100%; }
+    width: 100%; }
 
 .style {
   width: 100%;
-  height: 100%;
   display: flex;
-  justify-content: space-around; }
+  align-items: center;
+  justify-content: space-around;
+  margin: 25px 0; }
   @media screen and (max-width: 765px) {
     .style {
       flex-direction: column;
@@ -380,13 +399,15 @@ button:focus {
         height: auto; } }
     .style .text h2 {
       font-family: "code-light";
-      text-align: center; }
-      @media screen and (max-width: 765px) {
-        .style .text h2 {
-          font-size: 2rem; } }
+      text-align: center;
+      max-width: 580px;
+      font-size: 2rem; }
       .style .text h2 span {
         font-family: "code-light";
         font-size: 4em; }
+      @media (min-width: 765px) and (max-width: 1024px) {
+        .style .text h2 {
+          font-size: 1.5em; } }
       .style .text h2::after {
         content: "";
         width: 18%;
@@ -400,12 +421,12 @@ button:focus {
             width: 80%; } }
     .style .text p {
       font-family: "bryantpro-light";
-      width: 50%;
-      text-align: center; }
+      width: 100%;
+      text-align: center;
+      font-size: 1.5em; }
       @media screen and (max-width: 765px) {
         .style .text p {
           width: auto;
-          font-size: 1.5rem;
           padding: 0 25px;
           margin-top: 0; } }
   .style :nth-child(2) {
@@ -439,12 +460,13 @@ button:focus {
   width: 100%;
   height: 100%;
   background-image: url(../img/bespoke/hero.jpg);
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat; }
   @media screen and (max-width: 765px) {
     .bespoke-hero {
       background-size: cover;
-      background-position: 50%; } }
+      background-position: center; } }
   .bespoke-hero .hero-text {
     display: flex;
     flex-direction: column;
@@ -471,7 +493,7 @@ button:focus {
       .bespoke-hero .hero-text h1::after {
         position: absolute;
         display: block;
-        margin-left: -12px;
+        left: 10%;
         margin-top: 15px;
         content: "";
         width: 80%;
@@ -479,7 +501,6 @@ button:focus {
         background-color: #FCB543; }
         @media screen and (max-width: 765px) {
           .bespoke-hero .hero-text h1::after {
-            margin-left: 20px;
             margin-top: 0; } }
     .bespoke-hero .hero-text h4 {
       font-family: "code-bold";
@@ -663,11 +684,17 @@ button:focus {
       flex-direction: column;
       justify-content: center;
       align-items: center; }
+      .size .sizes .length .image img, .size .sizes .width .image img, .size .sizes .arch .image img {
+        width: 100%; }
       .size .sizes .length input, .size .sizes .width input, .size .sizes .arch input {
         width: 20%;
         height: 20px;
         border: 1px solid darkgray;
         text-align: center; }
+    .size .sizes .length .image {
+      width: 40%; }
+    .size .sizes .width .image, .size .sizes .arch .image {
+      width: 100%; }
     @media screen and (max-width: 765px) {
       .size .sizes .width {
         margin: 50px 0; } }
@@ -683,7 +710,8 @@ button:focus {
     padding: 5px 10px;
     border: 2px solid black;
     text-decoration: none;
-    color: black; }
+    color: black;
+    font-family: "bryantpro-regular"; }
     @media screen and (max-width: 765px) {
       .size a {
         position: static;
@@ -705,7 +733,7 @@ button:focus {
     .background .dot1.active {
       right: 110%; }
     .background .dot1 .move {
-      width: 30vw;
+      width: 29vw;
       height: 5px;
       background: white;
       position: absolute;
@@ -727,7 +755,7 @@ button:focus {
       right: 74.7%;
       opacity: 1; }
     .background .dot2 .move {
-      width: 30vw;
+      width: 29vw;
       height: 5px;
       background: white;
       position: absolute;
@@ -748,7 +776,7 @@ button:focus {
     top: 50%;
     opacity: 0; }
     .background .dot3 .move {
-      width: 30vw;
+      width: 29vw;
       height: 5px;
       background: white;
       position: absolute;
@@ -775,150 +803,108 @@ button:focus {
     transition: 1s all; }
     .background .timeline-year.active {
       opacity: 1; }
+    .background .timeline-year .text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 55%;
+      height: 305px;
+      transform: translate(-35%, -32%); }
+      @media screen and (max-width: 1200px) {
+        .background .timeline-year .text {
+          transform: translate(-30%, -20%); } }
+      @media screen and (max-width: 765px) {
+        .background .timeline-year .text {
+          transform: translate(-16%, -13%); } }
+      .background .timeline-year .text h1 {
+        color: white;
+        font-family: "code-bold";
+        font-size: 8rem;
+        letter-spacing: 5px;
+        margin: 0;
+        padding-bottom: 20px; }
+        @media screen and (max-width: 1200px) {
+          .background .timeline-year .text h1 {
+            font-size: 5rem; } }
+        @media screen and (max-width: 765px) {
+          .background .timeline-year .text h1 {
+            font-size: 4rem; } }
+      .background .timeline-year .text p {
+        width: 100%;
+        font-size: 1.5rem;
+        color: white;
+        font-family: "bryantpro-regular";
+        text-transform: uppercase;
+        margin: 0; }
+        @media screen and (max-width: 765px) {
+          .background .timeline-year .text p {
+            font-size: 1rem; } }
 
 .start {
-  background-image: url(../img/home/history-old.jpg);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/home/history-old.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0; }
-  .start h1 {
-    color: white;
-    font-family: "code-bold";
-    letter-spacing: 10px;
-    font-size: 7rem;
-    margin-top: 100px;
-    margin-left: -8%;
-    margin-bottom: 0; }
-    @media screen and (max-width: 1200px) {
-      .start h1 {
-        font-size: 5rem;
-        margin-top: 100px; } }
-  .start p {
-    color: white;
-    font-family: bryantpro-regular;
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    margin-left: -5%; }
+  .start .start-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 305px;
+    transform: translate(-60%, -30%); }
+    @media screen and (max-width: 765px) {
+      .start .start-text {
+        transform: translate(-80%, -30%); } }
+    .start .start-text h1 {
+      color: white;
+      font-family: "code-bold";
+      letter-spacing: 10px;
+      margin: 0;
+      padding-bottom: 20px;
+      font-size: 7rem; }
+      @media screen and (max-width: 765px) {
+        .start .start-text h1 {
+          font-size: 4rem; } }
+    .start .start-text p {
+      font-size: 1.2rem;
+      width: 100%;
+      color: white;
+      font-family: "bryantpro-regular";
+      text-transform: uppercase;
+      margin: 0; }
+      @media screen and (max-width: 765px) {
+        .start .start-text p {
+          font-size: 1rem; } }
 
 .y1890 {
-  background-image: url(../img/timeline/timeline-1890.jpg);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/timeline/timeline-1890.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0; }
-  .y1890 h1 {
-    font-family: "code-bold";
-    color: white;
-    letter-spacing: 5px;
-    font-size: 8rem;
-    margin-left: -20%;
-    margin-bottom: 0;
-    margin-top: 40px; }
-    @media screen and (max-width: 1200px) {
-      .y1890 h1 {
-        font-size: 5rem;
-        margin-top: 100px; } }
-  .y1890 p {
-    width: 45%;
-    font-size: 1.5rem;
-    font-family: bryantpro-light;
-    color: white;
-    margin-left: 7%; }
 
 .y1930 {
-  background-image: url(../img/timeline/timeline-1930.png);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/timeline/timeline-1930.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0; }
-  .y1930 h1 {
-    font-family: "code-bold";
-    color: white;
-    letter-spacing: 5px;
-    font-size: 8rem;
-    margin-left: -20%;
-    margin-bottom: 0;
-    margin-top: 70px; }
-    @media screen and (max-width: 1200px) {
-      .y1930 h1 {
-        font-size: 5rem;
-        margin-top: 130px; } }
-  .y1930 p {
-    width: 45%;
-    font-size: 1.5rem;
-    font-family: bryantpro-light;
-    color: white;
-    margin-left: 7%; }
 
 .y1982 {
-  background-image: url(../img/timeline/timeline-1982.png);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/timeline/timeline-1982.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0; }
-  .y1982 h1 {
-    font-family: "code-bold";
-    color: white;
-    letter-spacing: 5px;
-    font-size: 8rem;
-    margin-left: -20%;
-    margin-bottom: 0;
-    margin-top: 70px; }
-    @media screen and (max-width: 1200px) {
-      .y1982 h1 {
-        font-size: 5rem;
-        margin-top: 130px; } }
-  .y1982 p {
-    width: 45%;
-    font-size: 1.5rem;
-    font-family: bryantpro-light;
-    color: white;
-    margin-left: 7%; }
 
 .y2000 {
-  background-image: url(../img/timeline/timeline-2000.png);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/timeline/timeline-2000.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0; }
-  .y2000 h1 {
-    font-family: "code-bold";
-    color: white;
-    letter-spacing: 5px;
-    font-size: 8rem;
-    margin-left: -17%;
-    margin-bottom: 0;
-    margin-top: 120px; }
-    @media screen and (max-width: 1200px) {
-      .y2000 h1 {
-        font-size: 5rem;
-        margin-top: 170px; } }
-  .y2000 p {
-    width: 45%;
-    font-size: 1.5rem;
-    font-family: bryantpro-light;
-    color: white;
-    margin-left: 7%; }
 
 .today {
-  background-image: url(../img/timeline/timeline-now.png);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/timeline/timeline-now.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0; }
-  .today h1 {
-    font-family: "code-bold";
-    color: white;
-    letter-spacing: 5px;
-    font-size: 8rem;
-    margin-left: -12%;
-    margin-bottom: 0;
-    margin-top: 80px; }
-    @media screen and (max-width: 1200px) {
-      .today h1 {
-        font-size: 5rem;
-        margin-top: 120px; } }
-  .today p {
-    width: 45%;
-    font-size: 1.5rem;
-    font-family: bryantpro-light;
-    color: white;
-    margin-left: 7%; }
 
 footer {
   width: 100%;
